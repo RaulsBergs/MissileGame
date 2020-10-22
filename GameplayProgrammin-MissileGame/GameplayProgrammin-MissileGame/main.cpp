@@ -15,9 +15,6 @@ int main()
 	//variable to control whats displayed to the user
 	m_currentGameState = OptionMenuState;
 
-	
-	
-
 	//Displays all the different option menus for the control panel while user is on the menu screen;
 	while (playerOnline == true)
 	{
@@ -25,12 +22,10 @@ int main()
 		{
 			m_menuProcessing();
 		}
-
 		if (m_currentGameState == scanForShipsState)
 		{
 			m_scanForShips();
 		}
-
 		if (m_currentGameState == displayLaunchCodeState)
 		{
 			m_displayLaunchCode();
@@ -41,11 +36,9 @@ int main()
 		}
 		if (m_currentGameState == selectMissileTypeState)
 		{
-
+			selectMissileType();
 		}
 	}
-	
-	
 	return 1;
 }
 
@@ -127,7 +120,29 @@ void launchAttack::processAttack()
 
 void selectMissileType::selectMissileProcessing()
 {
+	std::cout << "---Select Missile Type Menu---" << std::endl << std::endl;
 
+	std::string missileTypeNames[3];
+
+	missileTypeNames[0] = "SS_N_2_Styx";
+	missileTypeNames[1] = "Exocet_AShM";
+	missileTypeNames[2] = "P_700_Granit";
+
+	std::cout << "  --  SS_N_2_Styx  " << "--  Exocet_AShM  --" << "  P_700_Granit  --" << std::endl;
+	std::cout << "Please choose a Missile by Inputting a number between (1 - 3):      ";
+	std::cin >> chosenMissile;
+	std::cout << std::endl;
+
+	while (chosenMissile > 3 || chosenMissile < 1)
+	{
+		std::cout << "Please enter a Number between 1 and 3:     " << std::endl;
+		std::cin >> chosenMissile;
+		std::cout << std::endl;
+	}
+
+	std::cout << "You have selected the:  " << missileTypeNames[chosenMissile - 1] << std:: endl;
+
+	m_currentGameState = 0;
 }
 
 void m_displayLaunchCode::generateLaunchCode()
@@ -164,12 +179,20 @@ void m_menuProcessing::setUpMenuScreen()
 	std::cout << "________________________________________" << std::endl;
 	std::cout << "Launch Attack (4)" << std::endl;
 	std::cout << "________________________________________" << std::endl;
-	std::cout << "Select Missile (1)" << std::endl;
+	std::cout << "Select Missile (5)" << std::endl;
 	std::cout << "________________________________________" << std::endl;
 
 	std::cout << "Please Choose a menu via the number (1 - 5):  ";
 
 	std::cin >> m_changeMenuState;
+
+	while (m_changeMenuState > 5 || m_changeMenuState < 1)
+	{
+		std::cout << "Please Input a number Between 1 and 5:         ";
+
+		std::cin >> m_changeMenuState;
+	}
+
 	std::cout << std::endl;
 	m_currentGameState = m_changeMenuState - 1;
 }

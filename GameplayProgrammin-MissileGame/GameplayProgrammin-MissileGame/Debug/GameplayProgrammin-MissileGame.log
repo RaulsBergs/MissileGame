@@ -1,3 +1,3 @@
 ﻿  main.cpp
-C:\Users\nikla\Desktop\GameplayProgrammin-MissileGame\GameplayProgrammin-MissileGame\main.cpp(9,14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  GameplayProgrammin-MissileGame.vcxproj -> C:\Users\nikla\Desktop\GameplayProgrammin-MissileGame\Debug\GameplayProgrammin-MissileGame.exe
+C:\Users\nikla\Desktop\MissileGame\GameplayProgrammin-MissileGame\GameplayProgrammin-MissileGame\main.cpp(9,14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GameplayProgrammin-MissileGame.vcxproj -> C:\Users\nikla\Desktop\MissileGame\GameplayProgrammin-MissileGame\Debug\GameplayProgrammin-MissileGame.exe

@@ -7,12 +7,11 @@
 #include <time.h> 
 #include <string>
 
-int m_changeMenuState;
-int m_currentGameState;
-int m_launchCode;
-const int m_AMOUNT_OF_SHIP_LOCATIONS = 10;
-int m_shipXLocations[5];
-int m_shipYLocations[5];
+int m_changeMenuState; //User inputs the number to game state
+int m_currentGameState; //Variable that keeps track of the games current state
+int m_launchCode; //The launch code
+int m_shipXLocations[5]; //stores the enemy ship x locations
+int m_shipYLocations[5]; //stores the enemy ship y locations
 int m_amountOfEnemyShips = 5; //helps Keep track of ships destroyed
 bool playerOnline = true; //bool to exit the game / keep running the game
 
@@ -22,7 +21,6 @@ public:
 	//Variables
 	int x_coOrdinate;
 	int y_coOrdinate;
-
 
 	//Methods
 	m_scanForShips() 
@@ -56,11 +54,12 @@ struct selectMissileType {
 public:
 	//Variables
 	enum missileTypes{ SS_N_2_Styx, Exocet_AShM, P_700_Granit};
+	int chosenMissile;
 
 	//Methods
 	selectMissileType()
 	{
-
+		selectMissileProcessing();
 	}
 	void selectMissileProcessing();
 };
