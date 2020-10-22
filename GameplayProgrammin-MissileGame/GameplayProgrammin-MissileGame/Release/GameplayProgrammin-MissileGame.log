@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\nikla\Desktop\GameplayProgrammin-MissileGame\GameplayProgrammin-MissileGame\main.cpp(14,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 3 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  GameplayProgrammin-MissileGame.vcxproj -> C:\Users\nikla\Desktop\GameplayProgrammin-MissileGame\Release\GameplayProgrammin-MissileGame.exe
